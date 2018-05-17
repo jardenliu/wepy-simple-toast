@@ -1,0 +1,4 @@
+package-lock.json
+wepy.config.js
+node_modules/
+.gitignore
