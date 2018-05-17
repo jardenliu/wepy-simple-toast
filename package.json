@@ -1,0 +1,31 @@
+{
+  "name": "wepy-simple-toast",
+  "version": "1.0.0",
+  "description": "微信小程序toast组件，适用于wepy",
+  "main": "toast.wpy",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jardenliu/wepy-simple-toast.git"
+  },
+  "keywords": [
+    "wepy",
+    "toast",
+    "wechat",
+    "miniapp",
+    "小程序",
+    "吐司"
+  ],
+  "author": "jardenliu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jardenliu/wepy-simple-toast/issues"
+  },
+  "homepage": "https://github.com/jardenliu/wepy-simple-toast#readme",
+  "devDependencies": {
+    "babel-eslint": "^7.2.1",
+    "babel-preset-env": "^1.6.1"
+  }
+}
