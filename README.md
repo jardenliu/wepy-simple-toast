@@ -65,6 +65,9 @@ export default class extends wepy.page {
 
 * PS: 如果`components`的名字不为`toast`，使用上述Mixin的四个函数时，需要在data里面添加`toastTagName:[toast的组件名]`
 
+## 完整示例
+点击查看 [example.wpy](https://github.com/jardenliu/wepy-simple-toast/blob/master/example.wpy)
+
 ## 效果图
 ![example1](https://jardenliu.github.io/demo/wepy-simple-toast/e1.png)
 ![example2](https://jardenliu.github.io/demo/wepy-simple-toast/e2.png)

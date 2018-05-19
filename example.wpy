@@ -1,0 +1,58 @@
+
+<style>
+button {
+  margin-top: 100px;
+}
+
+button + button {
+  margin-top: 10px;
+}
+</style>
+
+<template>
+  <view class="container">
+    测试toast
+    <button @tap="showSuccessTip">成功提示</button>
+    <button @tap="showErrorTip">错误提示</button>
+    <button @tap="showInfoTip">提醒提示</button>
+    <button @tap="showWarningTip">警告提示</button>
+    <toast/>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+import toast from 'wepy-simple-toast'
+
+export default class extends wepy.page {
+  config = {
+    navigationBarTitleText: 'simple-toast'
+  }
+
+  components = {
+    toast
+  }
+
+  mixins = [toast.mixin]
+
+  data = {}
+
+  methods = {
+    showSuccessTip() {
+      this.$invoke('toast', 'success', 'simple-toast success')
+    },
+    showErrorTip() {
+      this.$invoke('toast', 'error', 'simple-toast error', { duration: 5000 })
+    },
+    showInfoTip() {
+      this.$infoTip('simple-toast info', { duration: 5000 })
+    },
+    showWarningTip() {
+      this.$warningTip('simple-toast warning', { duration: 3000 })
+    }
+  }
+
+  onLoad() {
+  }
+}
+</script>

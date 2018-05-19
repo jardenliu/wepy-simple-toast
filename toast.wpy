@@ -92,7 +92,7 @@ class toastMixin extends wepy.mixin {
   }
 
   $warningTip(title, options) {
-    this.$invoke(this.toastTagName || 'toast', 'waring', title, options)
+    this.$invoke(this.toastTagName || 'toast', 'warning', title, options)
   }
 
   $infoTip(title, options) {
