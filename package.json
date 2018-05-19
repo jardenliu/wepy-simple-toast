@@ -1,6 +1,6 @@
 {
   "name": "wepy-simple-toast",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "微信小程序toast组件，适用于wepy",
   "main": "toast.wpy",
   "scripts": {
