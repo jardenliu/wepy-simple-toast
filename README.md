@@ -32,11 +32,13 @@ export default class extends wepy.page {
     // this.$invoke('toast', func, message)
     this.$invoke('toast', 'success', 'simple-toast success')
     //或者 this.$invoke('toast', func, message, options)，当前options只有duration（显示的时长）
-    this.$invoke('toast', 'success', 'simple-toast success', { duration: 3000 })
+    this.$invoke('toast', 'success', 'simple-toast success', { duration: 3000 }).then(data => {
+        console.log(data)
+      })
 
     // in async function
-    await this.$invoke('toast', 'success', 'simple-toast success');
-    console.log("test");
+   let data = await this.$invoke('toast', 'error', 'simple-toast error', { duration: 5000 })
+    console.log(data)
 ```
 1. func 参数包括 `success`、`info`、`warning`、`error`
 2. options参数当前只有 `duration`（显示的时长）
@@ -62,11 +64,13 @@ export default class extends wepy.page {
     // this.$infoTip(message)
     this.$infoTip('simple-toast info')
     //this.$errorTip(message, options)
-    this.$errorTip('simple-toast error', { duration: 3000 })
+    this.$errorTip('simple-toast error', { duration: 3000 }).then(data => {
+        console.log(data)
+      })
  
     // in async function
-    await $infoTip('simple-toast info')
-    console.log("test");
+    let  data = await this.$warningTip('simple-toast warning', { duration: 3000 })
+    console.log(data)
 ```
 1. mixin了四个函数 `$successTip`、`$infoTip`、`$warningTip`、`$errorTip`
 2. options参数当前只有 `duration`（显示的时长）

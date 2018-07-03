@@ -41,11 +41,14 @@ export default class extends wepy.page {
     showSuccessTip() {
       this.$invoke('toast', 'success', 'simple-toast success')
     },
-    showErrorTip() {
-      this.$invoke('toast', 'error', 'simple-toast error', { duration: 5000 })
+    async showErrorTip() {
+      let data = await this.$invoke('toast', 'error', 'simple-toast error', { duration: 5000 })
+      console.log(data)
     },
     showInfoTip() {
-      this.$infoTip('simple-toast info', { duration: 5000 })
+      this.$infoTip('simple-toast info', { duration: 5000 }).then(data => {
+        console.log(data)
+      })
     },
     showWarningTip() {
       this.$warningTip('simple-toast warning', { duration: 3000 })

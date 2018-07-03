@@ -159,7 +159,14 @@ export default class toast extends wepy.component {
         // if (this.id > 999999) { this.id = 0 }
         this.tipList.push(options)
         this.$apply()
-        setTimeout(() => { this.methods.removeItem.call(this, options.id); resolve() }, options.duration)
+        setTimeout(() => {
+          this.methods.removeItem.call(this, options.id)
+          let callBackData = {
+            status: `removed`,
+            options
+          }
+          resolve(callBackData)
+        }, options.duration)
       })
     },
     getOptions(arg1, arg2 = {}) {

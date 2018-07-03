@@ -3,3 +3,4 @@ wepy.config.js
 node_modules/
 .gitignore
 example.wpy
+example/
