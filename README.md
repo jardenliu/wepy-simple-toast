@@ -1,5 +1,5 @@
 # wepy-simple-toast
-微信小程序toast组件，适用于wepy
+微信小程序toast组件，适用于wepy，支持Promise。
 
 ## 使用
 **安装组件**
@@ -33,6 +33,10 @@ export default class extends wepy.page {
     this.$invoke('toast', 'success', 'simple-toast success')
     //或者 this.$invoke('toast', func, message, options)，当前options只有duration（显示的时长）
     this.$invoke('toast', 'success', 'simple-toast success', { duration: 3000 })
+
+    // in async function
+    await this.$invoke('toast', 'success', 'simple-toast success');
+    console.log("test");
 ```
 1. func 参数包括 `success`、`info`、`warning`、`error`
 2. options参数当前只有 `duration`（显示的时长）
@@ -59,6 +63,10 @@ export default class extends wepy.page {
     this.$infoTip('simple-toast info')
     //this.$errorTip(message, options)
     this.$errorTip('simple-toast error', { duration: 3000 })
+ 
+    // in async function
+    await $infoTip('simple-toast info')
+    console.log("test");
 ```
 1. mixin了四个函数 `$successTip`、`$infoTip`、`$warningTip`、`$errorTip`
 2. options参数当前只有 `duration`（显示的时长）
