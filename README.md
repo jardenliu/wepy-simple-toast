@@ -81,5 +81,5 @@ export default class extends wepy.page {
 点击查看 [example.wpy](https://github.com/jardenliu/wepy-simple-toast/blob/master/example.wpy)
 
 ## 效果图
-![example1](https://jardenliu.github.io/demo/wepy-simple-toast/e1.png)
-![example2](https://jardenliu.github.io/demo/wepy-simple-toast/e2.png)
+![example1](https://raw.githubusercontent.com/jardenliu/wepy-simple-toast/master/demo/e1.png)
+![example2](https://raw.githubusercontent.com/jardenliu/wepy-simple-toast/master/demo/e2.png)
